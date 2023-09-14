@@ -484,7 +484,11 @@ class Html2Text {
 							}
 						} else {
 							// empty string
-							$output = "$href";
+							if ($options['drop_links']) {
+								$output = "";
+							} else {
+								$output = "$href";
+							}
 						}
 					}
 				}

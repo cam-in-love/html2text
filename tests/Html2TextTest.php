@@ -94,4 +94,7 @@ class Html2TextTest extends \PHPUnit\Framework\TestCase {
 	public function testWindows1252(): void {
 		$this->doTestWithResults("windows-1252-example", "windows-1252-example", ['char_set' => 'windows-1252']);
 	}
+    public function testEmptyLink(): void {
+		$this->doTestWithResults("empty_link", "empty_link", ['drop_links' => true]);
+	}
 }
